@@ -1,0 +1,156 @@
+.container {
+  width: 100%;
+  max-width: 1130px;
+  margin: 0 auto;
+  margin-bottom: 89px;
+  padding: 0 16px;
+}
+
+.label1 {
+  width: 100%;
+  max-width: 491px;
+  height: auto;
+}
+
+.container img {
+  width: 100%;
+  height: auto;
+}
+
+.title {
+  color: #fff;
+  font-family: Krona One;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 1.4px;
+  margin-bottom: 14px;
+}
+
+.description {
+  color: #7d8387;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  /* 193.75% */
+  letter-spacing: 1px;
+}
+
+.accent {
+  margin-top: 26px;
+  border-left: 7px solid #00d1ff;
+  padding: 4px;
+  padding-left: 13px;
+}
+
+.accent span {
+  color: #fff;
+  margin-right: 16px;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.wrapper > .description {
+  max-width: 318px;
+}
+
+.testPhase {
+  width: 100%;
+  max-width: 558px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  position: relative;
+  margin-bottom: 115px;
+}
+
+.before,
+.after {
+  flex: 50%;
+  height: auto;
+  position: relative;
+}
+
+.label {
+  position: absolute;
+  bottom: 0;
+  color: #fff;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 31px; /* 193.75% */
+  letter-spacing: 1px;
+  transform: translateY(100%);
+  text-align: center;
+}
+
+.after {
+  transform: translateY(84px);
+}
+
+.testPhase video {
+  width: 100%;
+}
+
+.testPhase img {
+  position: absolute;
+  width: 160.624px;
+  flex-shrink: 0;
+  top: 0;
+  transform: translateY(-48px);
+}
+
+@media screen and (max-width: 1200px) {
+  .testPhase {
+    gap: 20px;
+    max-width: 420px;
+  }
+
+  .after {
+    transform: translateY(64px);
+  }
+
+  .testPhase img {
+    width: 140.624px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    flex-direction: column;
+  }
+
+  .testPhase {
+    max-width: 100%;
+  }
+
+  .wrapper > div {
+    max-width: 100%;
+  }
+
+  .accent {
+    margin-bottom: 20px;
+  }
+
+  .label {
+    max-width: 280px;
+  }
+
+  .title {
+    font-size: 14px;
+  }
+
+  .description {
+    font-size: 12px;
+  }
+}

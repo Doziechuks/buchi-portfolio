@@ -1,0 +1,181 @@
+.container {
+  padding-bottom: 71px;
+  margin-top: -72px;
+  position: relative;
+}
+
+.container.second {
+  /* background: #313335; */
+}
+
+.overlayImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: fixed;
+  bottom: unset;
+  top: 0;
+  left: 0;
+  display: none;
+  background: #313335;
+}
+
+.container.second .overlayImage {
+  display: block;
+}
+
+.container.first .overlayImage {
+  display: block;
+  top: unset;
+  bottom: 0;
+  height: 50%;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1392px;
+  margin: 0 auto;
+}
+
+.scrollWrapper {
+  margin-bottom: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 4px;
+  position: relative;
+}
+
+.label {
+  color: #d1d1d1;
+  font-family: Monument Extended;
+  font-size: 11.542px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25.007px; /* 216.667% */
+  letter-spacing: 0.173px;
+  text-transform: uppercase;
+  transform: rotate(-90deg) translateX(-42%);
+  white-space: nowrap;
+  position: absolute;
+  left: -120px;
+  width: 189px;
+  text-align: end;
+}
+
+.mobileLabel {
+  display: none;
+  color: #d1d1d1;
+  font-family: Monument Extended;
+  font-size: 11.542px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 25.007px; /* 216.667% */
+  letter-spacing: 0.173px;
+  text-transform: uppercase;
+  padding-top: 40px;
+  padding-left: 13px;
+  padding-bottom: 12px;
+}
+
+.projects {
+  width: 100%;
+  position: relative;
+}
+
+.btnContainer {
+  width: max-content;
+  margin: 0 auto;
+}
+
+.btn {
+  width: 258px;
+  height: 106px;
+  flex-shrink: 0;
+  border-radius: 100px;
+  border: 1.644px solid #3e3e46;
+  background: #353739;
+}
+
+.text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-family: Poppins;
+  font-size: 14.558px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 21.264px; /* 146.071% */
+  letter-spacing: 0.218px;
+  text-transform: uppercase;
+}
+
+.count {
+  color: #fff;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 21.264px; /* 132.903% */
+  letter-spacing: 0.24px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  margin-left: 6px;
+}
+
+.btnOverlay {
+  background: #f4821e;
+}
+
+@media screen and (max-width: calc(1440px + 24px)) {
+  .wrapper {
+    padding: 0 48px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 84px;
+  }
+
+  .scrollWindow {
+    display: none;
+  }
+
+  .scrollWindow > div {
+    height: auto;
+  }
+
+  .label {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .projects {
+    gap: 96px;
+  }
+
+  .container {
+    margin-top: 0;
+  }
+
+  .wrapper {
+    padding: 0;
+  }
+
+  .mobileLabel {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .overlayImage {
+    display: none !important;
+  }
+}

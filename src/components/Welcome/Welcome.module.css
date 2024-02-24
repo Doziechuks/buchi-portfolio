@@ -1,0 +1,127 @@
+.container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 65;
+
+  background: #0d0d0e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  visibility: visible;
+  opacity: 1;
+  transition: all 850ms;
+}
+
+.container.inActive {
+  animation: close 0.65s forwards cubic-bezier(0.8, 0.18, 0.41, 1.03);
+}
+
+.container.clearScreen * {
+  visibility: hidden;
+}
+
+@keyframes close {
+  from {
+    visibility: visible;
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+    visibility: hidden;
+  }
+}
+
+.textContainer {
+  padding: 0 16px;
+}
+
+.loadingContainer {
+  height: 100vh;
+  /* width: 100%;
+  max-width: 380px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  position: absolute;
+  top: 0;
+  right: 94px;
+  padding-top: 61px;
+}
+
+.animationContainer {
+  overflow: hidden;
+}
+
+.description {
+  color: #707479;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 28px; /* 200% */
+  letter-spacing: 0.14px;
+  padding-right: 16px;
+}
+
+.counterContainer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.counter {
+  color: #d9d9d9;
+  font-family: Monument Extended;
+  font-size: 96px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 76px; /* 79.167% */
+  letter-spacing: 3px;
+  margin-bottom: 27px;
+  animation: countTo100 50s linear forwards;
+  width: 340px;
+  text-align: right;
+}
+
+.emoji {
+  width: 218px;
+  height: auto;
+}
+
+.loadingContainer .description {
+  text-align: right;
+}
+
+@media screen and (max-width: 768px) {
+  .counter {
+    font-size: 36px;
+    line-height: 48px;
+    width: 220px;
+  }
+
+  .description {
+    font-size: 14px;
+    padding-right: 0;
+  }
+
+  .loadingContainer {
+    right: unset;
+  }
+
+  .counterContainer {
+    align-items: center;
+  }
+
+  .counter,
+  .loadingContainer .description {
+    text-align: center;
+  }
+}
